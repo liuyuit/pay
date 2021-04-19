@@ -1,15 +1,15 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Alipay;
+namespace liuyuit\Pay\Gateways\Alipay;
 
 use Exception;
-use Yansongda\Pay\Events;
-use Yansongda\Pay\Exceptions\GatewayException;
-use Yansongda\Pay\Exceptions\InvalidArgumentException;
-use Yansongda\Pay\Exceptions\InvalidConfigException;
-use Yansongda\Pay\Exceptions\InvalidSignException;
-use Yansongda\Pay\Gateways\Alipay;
-use Yansongda\Pay\Log;
+use liuyuit\Pay\Events;
+use liuyuit\Pay\Exceptions\GatewayException;
+use liuyuit\Pay\Exceptions\InvalidArgumentException;
+use liuyuit\Pay\Exceptions\InvalidConfigException;
+use liuyuit\Pay\Exceptions\InvalidSignException;
+use liuyuit\Pay\Gateways\Alipay;
+use liuyuit\Pay\Log;
 use Yansongda\Supports\Arr;
 use Yansongda\Supports\Collection;
 use Yansongda\Supports\Config;
@@ -154,7 +154,7 @@ class Support
      *
      * @throws InvalidConfigException
      */
-    public static function generateSign(array $params): string
+    public static function generateSign(array $params, $signType = "RSA"): string
     {
         $privateKey = self::$instance->private_key;
 
@@ -172,7 +172,11 @@ class Support
                 "\n-----END RSA PRIVATE KEY-----";
         }
 
-        openssl_sign(self::getSignContent($params), $sign, $privateKey, OPENSSL_ALGO_SHA256);
+        if ("RSA2" == $signType) {
+            openssl_sign(self::getSignContent($params), $sign, $privateKey, OPENSSL_ALGO_SHA256);//OPENSSL_ALGO_SHA256是php5.4.8以上版本才支持
+        } else {
+            openssl_sign(self::getSignContent($params), $sign, $privateKey);
+        }
 
         $sign = base64_encode($sign);
 

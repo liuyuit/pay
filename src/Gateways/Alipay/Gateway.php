@@ -1,9 +1,9 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Alipay;
+namespace liuyuit\Pay\Gateways\Alipay;
 
-use Yansongda\Pay\Contracts\GatewayInterface;
-use Yansongda\Pay\Exceptions\InvalidArgumentException;
+use liuyuit\Pay\Contracts\GatewayInterface;
+use liuyuit\Pay\Exceptions\InvalidArgumentException;
 use Yansongda\Supports\Collection;
 
 abstract class Gateway implements GatewayInterface
