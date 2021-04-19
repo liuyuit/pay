@@ -1,12 +1,12 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Wechat;
+namespace liuyuit\Pay\Gateways\Wechat;
 
-use Yansongda\Pay\Events;
-use Yansongda\Pay\Exceptions\GatewayException;
-use Yansongda\Pay\Exceptions\InvalidArgumentException;
-use Yansongda\Pay\Exceptions\InvalidSignException;
-use Yansongda\Pay\Gateways\Wechat;
+use liuyuit\Pay\Events;
+use liuyuit\Pay\Exceptions\GatewayException;
+use liuyuit\Pay\Exceptions\InvalidArgumentException;
+use liuyuit\Pay\Exceptions\InvalidSignException;
+use liuyuit\Pay\Gateways\Wechat;
 use Yansongda\Supports\Collection;
 
 class GroupRedpackGateway extends Gateway

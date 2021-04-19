@@ -1,13 +1,13 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Alipay;
+namespace liuyuit\Pay\Gateways\Alipay;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
-use Yansongda\Pay\Events;
-use Yansongda\Pay\Exceptions\InvalidArgumentException;
-use Yansongda\Pay\Exceptions\InvalidConfigException;
-use Yansongda\Pay\Gateways\Alipay;
+use liuyuit\Pay\Events;
+use liuyuit\Pay\Exceptions\InvalidArgumentException;
+use liuyuit\Pay\Exceptions\InvalidConfigException;
+use liuyuit\Pay\Gateways\Alipay;
 
 class WebGateway extends Gateway
 {
@@ -34,7 +34,7 @@ class WebGateway extends Gateway
         }
         $payload['method'] = $this->getMethod();
         $payload['biz_content'] = json_encode($biz_array);
-        $payload['sign'] = Support::generateSign($payload);
+        $payload['sign'] = Support::generateSign($payload, $payload['sign_type']);
 
         Events::dispatch(new Events\PayStarted('Alipay', 'Web/Wap', $endpoint, $payload));
 
