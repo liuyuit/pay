@@ -223,7 +223,11 @@ class Support
 
         $toVerify = $sync ? json_encode($data, JSON_UNESCAPED_UNICODE) : self::getSignContent($data, true);
 
-        $isVerify = 1 === openssl_verify($toVerify, base64_decode($sign), $publicKey, OPENSSL_ALGO_SHA256);
+        if ("RSA2" == $data['sign_type']) {
+            $isVerify = 1 === openssl_verify($toVerify, base64_decode($sign), $publicKey, OPENSSL_ALGO_SHA256); //OPENSSL_ALGO_SHA256是php5.4.8以上版本才支持
+        } else {
+            $isVerify = 1 === openssl_verify($toVerify, base64_decode($sign), $publicKey);
+        }
 
         if (is_resource($publicKey)) {
             openssl_free_key($publicKey);
