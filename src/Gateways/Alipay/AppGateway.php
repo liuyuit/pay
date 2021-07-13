@@ -29,7 +29,7 @@ class AppGateway extends Gateway
             $biz_array['extend_params'] = is_array($biz_array['extend_params']) ? array_merge(['sys_service_provider_id' => Support::getInstance()->pid], $biz_array['extend_params']) : ['sys_service_provider_id' => Support::getInstance()->pid];
         }
         $payload['biz_content'] = json_encode(array_merge($biz_array, ['product_code' => 'QUICK_MSECURITY_PAY']));
-        $payload['sign'] = Support::generateSign($payload);
+        $payload['sign'] = Support::generateSign($payload, $payload['sign_type']);
 
         Events::dispatch(new Events\PayStarted('Alipay', 'App', $endpoint, $payload));
 
