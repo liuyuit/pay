@@ -34,7 +34,7 @@ class WebGateway extends Gateway
         }
         $payload['method'] = $this->getMethod();
         $payload['biz_content'] = json_encode($biz_array);
-        $payload['sign'] = Support::generateSign($payload, $payload['sign_type']);
+        $payload['sign'] = Support::generateSign($payload);
 
         Events::dispatch(new Events\PayStarted('Alipay', 'Web/Wap', $endpoint, $payload));
 

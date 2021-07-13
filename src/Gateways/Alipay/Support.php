@@ -154,7 +154,7 @@ class Support
      *
      * @throws InvalidConfigException
      */
-    public static function generateSign(array $params, $signType = "RSA"): string
+    public static function generateSign(array $params): string
     {
         $privateKey = self::$instance->private_key;
 
@@ -172,10 +172,10 @@ class Support
                 "\n-----END RSA PRIVATE KEY-----";
         }
 
-        if ("RSA2" == $signType) {
-            openssl_sign(self::getSignContent($params), $sign, $privateKey, OPENSSL_ALGO_SHA256);//OPENSSL_ALGO_SHA256是php5.4.8以上版本才支持
-        } else {
+        if (isset($params['sign_type']) && 'RSA' == $params['sign_type']) {
             openssl_sign(self::getSignContent($params), $sign, $privateKey);
+        } else {
+            openssl_sign(self::getSignContent($params), $sign, $privateKey, OPENSSL_ALGO_SHA256); // OPENSSL_ALGO_SHA256是php5.4.8以上版本才支持
         }
 
         $sign = base64_encode($sign);
@@ -223,7 +223,7 @@ class Support
 
         $toVerify = $sync ? json_encode($data, JSON_UNESCAPED_UNICODE) : self::getSignContent($data, true);
 
-        if ("RSA2" == $data['sign_type']) {
+        if ('RSA2' == $data['sign_type']) {
             $isVerify = 1 === openssl_verify($toVerify, base64_decode($sign), $publicKey, OPENSSL_ALGO_SHA256); //OPENSSL_ALGO_SHA256是php5.4.8以上版本才支持
         } else {
             $isVerify = 1 === openssl_verify($toVerify, base64_decode($sign), $publicKey);
