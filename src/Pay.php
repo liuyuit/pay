@@ -6,6 +6,7 @@ use Exception;
 use liuyuit\Pay\Contracts\GatewayApplicationInterface;
 use liuyuit\Pay\Exceptions\InvalidGatewayException;
 use liuyuit\Pay\Gateways\Alipay;
+use liuyuit\Pay\Gateways\Momoyu;
 use liuyuit\Pay\Gateways\Wechat;
 use liuyuit\Pay\Listeners\KernelLogSubscriber;
 use Yansongda\Supports\Config;
@@ -16,6 +17,7 @@ use Yansongda\Supports\Str;
 /**
  * @method static Alipay alipay(array $config) 支付宝
  * @method static Wechat wechat(array $config) 微信
+ * @method static Momoyu Momoyu(array $config) 摸摸鱼
  */
 class Pay
 {

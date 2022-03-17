@@ -40,7 +40,6 @@ $order = [
 ];
 try {
     $alipay = Pay::alipay($config)->web($order);
-
 } catch (\Exception $exception) {
     var_dump($exception->getMessage());
 }
