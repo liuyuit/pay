@@ -31,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "liuyuit\\Pay\\": "src"
+            "liuyuit\\XyPaySdk\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "liuyuit\\Pay\\Tests\\": "tests"
+            "liuyuit\\XyPaySdk\\Tests\\": "tests"
         }
     },
     "license": "MIT"
