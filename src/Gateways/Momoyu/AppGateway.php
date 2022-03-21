@@ -1,11 +1,11 @@
 <?php
 
-namespace liuyuit\Pay\Gateways\Momoyu;
+namespace liuyuit\XyPaySdk\Gateways\Momoyu;
 
 use Symfony\Component\HttpFoundation\Response;
-use liuyuit\Pay\Events;
-use liuyuit\Pay\Exceptions\InvalidArgumentException;
-use liuyuit\Pay\Exceptions\InvalidConfigException;
+use liuyuit\XyPaySdk\Events;
+use liuyuit\XyPaySdk\Exceptions\InvalidArgumentException;
+use liuyuit\XyPaySdk\Exceptions\InvalidConfigException;
 
 class AppGateway extends Gateway
 {

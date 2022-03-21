@@ -1,15 +1,15 @@
 <?php
 
-namespace liuyuit\Pay\Gateways\Momoyu;
+namespace liuyuit\XyPaySdk\Gateways\Momoyu;
 
 use Exception;
-use liuyuit\Pay\Events;
-use liuyuit\Pay\Exceptions\GatewayException;
-use liuyuit\Pay\Exceptions\InvalidArgumentException;
-use liuyuit\Pay\Exceptions\InvalidConfigException;
-use liuyuit\Pay\Exceptions\InvalidSignException;
-use liuyuit\Pay\Gateways\Momoyu;
-use liuyuit\Pay\Log;
+use liuyuit\XyPaySdk\Events;
+use liuyuit\XyPaySdk\Exceptions\GatewayException;
+use liuyuit\XyPaySdk\Exceptions\InvalidArgumentException;
+use liuyuit\XyPaySdk\Exceptions\InvalidConfigException;
+use liuyuit\XyPaySdk\Exceptions\InvalidSignException;
+use liuyuit\XyPaySdk\Gateways\Momoyu;
+use liuyuit\XyPaySdk\Log;
 use Yansongda\Supports\Arr;
 use Yansongda\Supports\Collection;
 use Yansongda\Supports\Config;

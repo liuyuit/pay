@@ -1,10 +1,10 @@
 <?php
 
-namespace liuyuit\Pay\Listeners;
+namespace liuyuit\XyPaySdk\Listeners;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use liuyuit\Pay\Events;
-use liuyuit\Pay\Log;
+use liuyuit\XyPaySdk\Events;
+use liuyuit\XyPaySdk\Log;
 
 class KernelLogSubscriber implements EventSubscriberInterface
 {

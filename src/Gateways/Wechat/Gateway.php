@@ -1,12 +1,12 @@
 <?php
 
-namespace liuyuit\Pay\Gateways\Wechat;
+namespace liuyuit\XyPaySdk\Gateways\Wechat;
 
-use liuyuit\Pay\Contracts\GatewayInterface;
-use liuyuit\Pay\Events;
-use liuyuit\Pay\Exceptions\GatewayException;
-use liuyuit\Pay\Exceptions\InvalidArgumentException;
-use liuyuit\Pay\Exceptions\InvalidSignException;
+use liuyuit\XyPaySdk\Contracts\GatewayInterface;
+use liuyuit\XyPaySdk\Events;
+use liuyuit\XyPaySdk\Exceptions\GatewayException;
+use liuyuit\XyPaySdk\Exceptions\InvalidArgumentException;
+use liuyuit\XyPaySdk\Exceptions\InvalidSignException;
 use Yansongda\Supports\Collection;
 
 abstract class Gateway implements GatewayInterface

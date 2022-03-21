@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use liuyuit\Pay\Pay;
+use liuyuit\XyPaySdk\Pay;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');

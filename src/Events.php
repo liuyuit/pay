@@ -1,6 +1,6 @@
 <?php
 
-namespace liuyuit\Pay;
+namespace liuyuit\XyPaySdk;
 
 use Exception;
 use Symfony\Component\EventDispatcher\EventDispatcher;

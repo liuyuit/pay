@@ -1,9 +1,9 @@
 <?php
 
-namespace liuyuit\Pay\Gateways\Momoyu;
+namespace liuyuit\XyPaySdk\Gateways\Momoyu;
 
-use liuyuit\Pay\Contracts\GatewayInterface;
-use liuyuit\Pay\Exceptions\InvalidArgumentException;
+use liuyuit\XyPaySdk\Contracts\GatewayInterface;
+use liuyuit\XyPaySdk\Exceptions\InvalidArgumentException;
 use Yansongda\Supports\Collection;
 
 abstract class Gateway implements GatewayInterface

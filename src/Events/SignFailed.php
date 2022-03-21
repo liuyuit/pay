@@ -1,6 +1,6 @@
 <?php
 
-namespace liuyuit\Pay\Events;
+namespace liuyuit\XyPaySdk\Events;
 
 class SignFailed extends Event
 {

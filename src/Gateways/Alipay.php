@@ -1,18 +1,18 @@
 <?php
 
-namespace liuyuit\Pay\Gateways;
+namespace liuyuit\XyPaySdk\Gateways;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use liuyuit\Pay\Contracts\GatewayApplicationInterface;
-use liuyuit\Pay\Contracts\GatewayInterface;
-use liuyuit\Pay\Events;
-use liuyuit\Pay\Exceptions\GatewayException;
-use liuyuit\Pay\Exceptions\InvalidArgumentException;
-use liuyuit\Pay\Exceptions\InvalidConfigException;
-use liuyuit\Pay\Exceptions\InvalidGatewayException;
-use liuyuit\Pay\Exceptions\InvalidSignException;
-use liuyuit\Pay\Gateways\Alipay\Support;
+use liuyuit\XyPaySdk\Contracts\GatewayApplicationInterface;
+use liuyuit\XyPaySdk\Contracts\GatewayInterface;
+use liuyuit\XyPaySdk\Events;
+use liuyuit\XyPaySdk\Exceptions\GatewayException;
+use liuyuit\XyPaySdk\Exceptions\InvalidArgumentException;
+use liuyuit\XyPaySdk\Exceptions\InvalidConfigException;
+use liuyuit\XyPaySdk\Exceptions\InvalidGatewayException;
+use liuyuit\XyPaySdk\Exceptions\InvalidSignException;
+use liuyuit\XyPaySdk\Gateways\Alipay\Support;
 use Yansongda\Supports\Collection;
 use Yansongda\Supports\Config;
 use Yansongda\Supports\Str;

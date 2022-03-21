@@ -1,8 +1,8 @@
 <?php
 
-namespace liuyuit\Pay\Gateways\Wechat;
+namespace liuyuit\XyPaySdk\Gateways\Wechat;
 
-use liuyuit\Pay\Exceptions\InvalidArgumentException;
+use liuyuit\XyPaySdk\Exceptions\InvalidArgumentException;
 
 class RefundGateway extends Gateway
 {

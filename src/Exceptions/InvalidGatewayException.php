@@ -1,6 +1,6 @@
 <?php
 
-namespace liuyuit\Pay\Exceptions;
+namespace liuyuit\XyPaySdk\Exceptions;
 
 class InvalidGatewayException extends Exception
 {

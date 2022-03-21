@@ -1,13 +1,13 @@
 <?php
 
-namespace liuyuit\Pay\Gateways\Alipay;
+namespace liuyuit\XyPaySdk\Gateways\Alipay;
 
-use liuyuit\Pay\Events;
-use liuyuit\Pay\Exceptions\GatewayException;
-use liuyuit\Pay\Exceptions\InvalidArgumentException;
-use liuyuit\Pay\Exceptions\InvalidConfigException;
-use liuyuit\Pay\Exceptions\InvalidSignException;
-use liuyuit\Pay\Gateways\Alipay;
+use liuyuit\XyPaySdk\Events;
+use liuyuit\XyPaySdk\Exceptions\GatewayException;
+use liuyuit\XyPaySdk\Exceptions\InvalidArgumentException;
+use liuyuit\XyPaySdk\Exceptions\InvalidConfigException;
+use liuyuit\XyPaySdk\Exceptions\InvalidSignException;
+use liuyuit\XyPaySdk\Gateways\Alipay;
 use Yansongda\Supports\Collection;
 
 class MiniGateway extends Gateway

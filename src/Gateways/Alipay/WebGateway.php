@@ -1,13 +1,13 @@
 <?php
 
-namespace liuyuit\Pay\Gateways\Alipay;
+namespace liuyuit\XyPaySdk\Gateways\Alipay;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
-use liuyuit\Pay\Events;
-use liuyuit\Pay\Exceptions\InvalidArgumentException;
-use liuyuit\Pay\Exceptions\InvalidConfigException;
-use liuyuit\Pay\Gateways\Alipay;
+use liuyuit\XyPaySdk\Events;
+use liuyuit\XyPaySdk\Exceptions\InvalidArgumentException;
+use liuyuit\XyPaySdk\Exceptions\InvalidConfigException;
+use liuyuit\XyPaySdk\Gateways\Alipay;
 
 class WebGateway extends Gateway
 {

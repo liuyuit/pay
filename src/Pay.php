@@ -1,14 +1,14 @@
 <?php
 
-namespace liuyuit\Pay;
+namespace liuyuit\XyPaySdk;
 
 use Exception;
-use liuyuit\Pay\Contracts\GatewayApplicationInterface;
-use liuyuit\Pay\Exceptions\InvalidGatewayException;
-use liuyuit\Pay\Gateways\Alipay;
-use liuyuit\Pay\Gateways\Momoyu;
-use liuyuit\Pay\Gateways\Wechat;
-use liuyuit\Pay\Listeners\KernelLogSubscriber;
+use liuyuit\XyPaySdk\Contracts\GatewayApplicationInterface;
+use liuyuit\XyPaySdk\Exceptions\InvalidGatewayException;
+use liuyuit\XyPaySdk\Gateways\Alipay;
+use liuyuit\XyPaySdk\Gateways\Momoyu;
+use liuyuit\XyPaySdk\Gateways\Wechat;
+use liuyuit\XyPaySdk\Listeners\KernelLogSubscriber;
 use Yansongda\Supports\Config;
 use Yansongda\Supports\Log;
 use Yansongda\Supports\Logger;

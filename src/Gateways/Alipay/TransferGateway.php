@@ -1,12 +1,12 @@
 <?php
 
-namespace liuyuit\Pay\Gateways\Alipay;
+namespace liuyuit\XyPaySdk\Gateways\Alipay;
 
-use liuyuit\Pay\Contracts\GatewayInterface;
-use liuyuit\Pay\Events;
-use liuyuit\Pay\Exceptions\GatewayException;
-use liuyuit\Pay\Exceptions\InvalidConfigException;
-use liuyuit\Pay\Exceptions\InvalidSignException;
+use liuyuit\XyPaySdk\Contracts\GatewayInterface;
+use liuyuit\XyPaySdk\Events;
+use liuyuit\XyPaySdk\Exceptions\GatewayException;
+use liuyuit\XyPaySdk\Exceptions\InvalidConfigException;
+use liuyuit\XyPaySdk\Exceptions\InvalidSignException;
 use Yansongda\Supports\Collection;
 
 class TransferGateway implements GatewayInterface

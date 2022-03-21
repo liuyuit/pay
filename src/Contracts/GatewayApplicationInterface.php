@@ -1,6 +1,6 @@
 <?php
 
-namespace liuyuit\Pay\Contracts;
+namespace liuyuit\XyPaySdk\Contracts;
 
 use Symfony\Component\HttpFoundation\Response;
 use Yansongda\Supports\Collection;
