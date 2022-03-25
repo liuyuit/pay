@@ -125,12 +125,15 @@ class Momoyu implements GatewayApplicationInterface
 
         $this->payload['notify_url'] = $params['notify_url'] ?? $this->payload['notify_url'];
         $this->payload['cp_user_id'] = $params['uid'];
-        $this->payload['order_no'] = $params['out_trade_no'];
+        $this->payload['body'] = '';
+        $this->payload['custom_callback_info'] = '';
+        $this->payload['order_no'] = (string) $params['out_trade_no'];
         $this->payload['product_id'] = 'total_amount_'.$params['total_amount'];
         $this->payload['subject'] = $params['subject'];
         $this->payload['total_amount'] = (int) $params['total_amount'];
         $this->payload['trade_time'] = time();
         $this->payload['valid_time'] = 600;
+        $this->payload['sign_type'] = 'MD5';
 
         $gateway = get_class($this).'\\'.Str::studly($gateway).'Gateway';
 
@@ -303,7 +306,7 @@ class Momoyu implements GatewayApplicationInterface
 
         if ($app instanceof GatewayInterface) {
             return $app->pay($this->gateway, array_filter($this->payload, function ($value) {
-                return '' !== $value && !is_null($value);
+                return !is_null($value);
             }));
         }
 
