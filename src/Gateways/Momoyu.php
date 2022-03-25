@@ -124,8 +124,7 @@ class Momoyu implements GatewayApplicationInterface
         Events::dispatch(new Events\PayStarting('Momoyu', $gateway, $params));
 
         $this->payload['notify_url'] = $params['notify_url'] ?? $this->payload['notify_url'];
-
-        $this->payload['open_id'] = $params['uid'];
+        $this->payload['cp_user_id'] = $params['uid'];
         $this->payload['order_no'] = $params['out_trade_no'];
         $this->payload['product_id'] = $params['total_amount'];
         $this->payload['subject'] = $params['subject'];
