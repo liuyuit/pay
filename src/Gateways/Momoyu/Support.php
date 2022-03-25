@@ -228,7 +228,7 @@ class Support
             if ($verify && 'sign' != $k && 'sign_type' != $k) {
                 $stringToBeSigned .= $k.'='.$v.'&';
             }
-            if (!$verify && '' !== $v && !is_null($v) && 'sign' != $k && '@' != substr($v, 0, 1)) {
+            if (!$verify && !is_null($v) && 'sign' != $k && '@' != substr($v, 0, 1)) {
                 $stringToBeSigned .= $k.'='.$v.'&';
             }
         }
