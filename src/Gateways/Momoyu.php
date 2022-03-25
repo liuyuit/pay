@@ -126,11 +126,11 @@ class Momoyu implements GatewayApplicationInterface
         $this->payload['notify_url'] = $params['notify_url'] ?? $this->payload['notify_url'];
         $this->payload['cp_user_id'] = $params['uid'];
         $this->payload['order_no'] = $params['out_trade_no'];
-        $this->payload['product_id'] = $params['total_amount'];
+        $this->payload['product_id'] = 'total_amount_'.$params['total_amount'];
         $this->payload['subject'] = $params['subject'];
-        $this->payload['total_amount'] = $params['total_amount'];
+        $this->payload['total_amount'] = (int) $params['total_amount'];
         $this->payload['trade_time'] = time();
-        $this->payload['valid_time'] = 60;
+        $this->payload['valid_time'] = 600;
 
         $gateway = get_class($this).'\\'.Str::studly($gateway).'Gateway';
 
@@ -181,7 +181,7 @@ class Momoyu implements GatewayApplicationInterface
      * @throws InvalidConfigException
      * @throws InvalidSignException
      */
-    public function find($order, string $type = 'wap'): Collection
+    public function find($order, string $type = 'wap')
     {
     }
 
@@ -194,7 +194,7 @@ class Momoyu implements GatewayApplicationInterface
      * @throws InvalidConfigException
      * @throws InvalidSignException
      */
-    public function refund(array $order): Collection
+    public function refund(array $order)
     {
     }
 
@@ -209,7 +209,7 @@ class Momoyu implements GatewayApplicationInterface
      * @throws InvalidConfigException
      * @throws InvalidSignException
      */
-    public function cancel($order): Collection
+    public function cancel($order)
     {
     }
 
@@ -224,7 +224,7 @@ class Momoyu implements GatewayApplicationInterface
      * @throws InvalidConfigException
      * @throws InvalidSignException
      */
-    public function close($order): Collection
+    public function close($order)
     {
     }
 
@@ -239,7 +239,7 @@ class Momoyu implements GatewayApplicationInterface
      * @throws InvalidConfigException
      * @throws InvalidSignException
      */
-    public function download($bill): string
+    public function download($bill)
     {
     }
 
@@ -248,7 +248,7 @@ class Momoyu implements GatewayApplicationInterface
      *
      * @author yansongda <me@yansongda.cn>
      */
-    public function success(): Response
+    public function success()
     {
     }
 
